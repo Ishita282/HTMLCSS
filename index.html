@@ -82,7 +82,7 @@
     </style>
   </head>
   <body>
-    <nav id="greeting">Hello, </nav>
+    <nav id="greeting">Hello </nav>
 
     <main>
     <div class="box-container">
@@ -105,9 +105,9 @@
       greetButton.addEventListener("click", () => {
         const name = nameInput.value.trim();
         if (name) {
-          greeting.textContent = `Hello, ${name}!`;
+          greeting.textContent = `Hello, ${name}`;
         } else {
-          greeting.textContent = "Hello!";
+          greeting.textContent = "Hello";
           greeting.style.color = "#333";
         }
       });
