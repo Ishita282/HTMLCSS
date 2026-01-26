@@ -1,125 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Greeting and Color Boxes</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-      }
-
-      nav {
-      width: 100%;
-      background-color: #d3d3d3;
-      color: rgb(0, 0, 0);
-      padding: 15px 0;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: bold;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-     main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 90vh;
-    }
-
-      .box-container {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 80px;
-      }
-
-      .box {
-        width: 100px;
-        height: 100px;
-        border-radius: 1px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        cursor: pointer;
-        background-color: white;
-        border: 2px solid #ccc;
-        transition: all 0.3s ease;
-      }
-
-      input {
-        padding: 10px;
-        font-size: 1rem;
-        border-radius: 1px;
-        border: 1px solid #000000;
-        width: 200px;
-        margin-top: 80px;
-        margin-bottom: 50%;
-        outline: none;
-      }
-
-      button {
-        padding: 10px 20px;
-        font-size: 1rem;
-        background-color: rgb(155, 155, 155);
-        color: rgb(12, 12, 12);
-        border: none;
-        border-radius: 1px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-    </style>
+    <title>Test-html</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav id="greeting">Hello </nav>
-
+    <header>
+      <h3 id="greet">Hello</h3>
+    </header>
     <main>
-    <div class="box-container">
-      <div class="box" id="redBox">Red</div>
-      <div class="box" id="blueBox">Blue</div>
-      <div class="box" id="greenBox">Green</div>
-      <div class="box" id="yellowBox">Yellow</div>
-    </div>
+      <div class="boxes">
+        <span class="Box">Red</span>
+        <span class="Box">Blue</span>
+        <span class="Box">Green</span>
+        <span class="Box">Yellow</span>
+      </div>
 
-    <div>
-      <input type="text" id="nameInput" placeholder="Enter your name" />
-      <button id="greetButton">Greet</button>
-    </div>
+      <div id="input">
+        <input type="text" id="text" placeholder="Enter your name" />
+        <button id="button">Greet</button>
+      </div>
+    </main>
 
-    <script>
-      const greetButton = document.getElementById("greetButton");
-      const nameInput = document.getElementById("nameInput");
-      const greeting = document.getElementById("greeting");
-
-      greetButton.addEventListener("click", () => {
-        const name = nameInput.value.trim();
-        if (name) {
-          greeting.textContent = `Hello, ${name}`;
-        } else {
-          greeting.textContent = "Hello";
-          greeting.style.color = "#333";
-        }
-      });
-
-      const boxes = document.querySelectorAll(".box");
-      boxes.forEach((box) => {
-        box.addEventListener("click", () => {
-          const color = box.textContent.toLowerCase();
-          box.style.backgroundColor = color;
-          box.style.color = "white";
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
