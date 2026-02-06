@@ -5,8 +5,11 @@ const boxes= document.querySelectorAll(".Box");
 
 greetButton.addEventListener("click", () =>{
     const name= nameInput.value;
-    greetingName.textContent= `Hello, ${name}`
-
+    if(name.length === 0){
+        return 0;
+    }else{
+        greetingName.textContent= `Hello, ${name}`
+    }
 })
 
 boxes.forEach((box)=> {
