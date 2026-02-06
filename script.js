@@ -6,7 +6,7 @@ const boxes= document.querySelectorAll(".Box");
 greetButton.addEventListener("click", () =>{
     const name= nameInput.value;
     if(name.length === 0){
-        return 0;
+        return alert("Please enter your name");
     }else{
         greetingName.textContent= `Hello, ${name}`
     }
